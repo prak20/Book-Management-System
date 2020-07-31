@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Bookapp</title>
+    <link rel="stylesheet" href="{% static '/css/Bookstyle.css'%}">
+  </head>
+  <body>
+    <div id="header">
+      <h1>
+        Book Record Management
+        </h1>
+        <div id="nav">
+          <a href="/Bookapp/view-books">view All</a>
+          <a href="/Bookapp/new-book">Add new book</a>
+          <a href="/Bookapp/search-book">Search Specific Book</a>
+
+          </div>
+          </div>
+          <div id="main">
+          <form method="post">
+            {% csrf_token %}
+            <table>
+              <tr>
+                <td><label for=username">Username</label></td>
+                <td><input type="text" name="username" id="username"></td>
+              </tr>
+              <tr>
+                <td><label for=password">Password</label></td>
+                <td><input type="password" name="password" id="password"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><input type="submit" value="login"></td>
+              </tr>
+              </table>
+              </form>
+              <p>{{error}}
+              </div>
+  </body>
+</html>

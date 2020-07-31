@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>View Book Records</title>
+    <link rel="stylesheet" href="{% static '/css/Bookstyle.css'%}">
+  </head>
+  <body>
+    <div id="header">
+      <h1>
+        Book Record Management
+        </h1>
+        <div id="nav">
+          <a href="/Bookapp/view-books">view All</a>
+          <a href="/Bookapp/new-book">Add new book</a>
+          <a href="/Bookapp/search-book">Search Specific Book</a>
+          <a href="/Bookapp/logout">Logout</a>
+          </div>
+          <h2>Hello, {{username}}</h2>
+          </div>
+          <div id="main">
+            <h2>View Book Record</h2>
+            <table>
+              <thead>
+                <th>Book Title</th>
+                <th>Price</th>
+                <th>Author</th>
+                <th>Publisher</th>
+                </thead>
+                {% for book in books %}
+
+                <tr>
+                  <td>{{book.title}}</td>
+                  <td>{{book.price}}</td>
+                  <td>{{book.author}}</td>
+                  <td>{{book.publisher}}</td>
+                    <td><a class="btn" href="/Bookapp/edit-book?bookid={{book.id}}">Edit</a></td>
+                      <td><a class="btn" href="/Bookapp/delete-book?bookid={{book.id}}">Delete</a></td>
+                  </tr>
+                  {% endfor %}
+              </table>
+              </div>
+  </body>
+</html>

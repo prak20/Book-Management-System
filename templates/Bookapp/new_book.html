@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>New Book Form</title>
+    <link rel="stylesheet" href="{% static '/css/Bookstyle.css' %}">
+  </head>
+  <body>
+    <div id="header">
+      <h1>
+        Book Record Management
+        </h1>
+        <div id="nav">
+          <a href="/Bookapp/view-books">View All</a>
+          <a href="/Bookapp/new-book">Add new book</a>
+          <a href="/Bookapp/search-book">Search Specific Book</a>
+          <a href="/Bookapp/logout">Logout</a>
+          </div>
+          </div>
+          <div id="main">
+            <h2>Add new Book Record</h2>
+            <form action="/Bookapp/add" method='post'>
+              {% csrf_token %}
+              {{form}}
+              <input type="submit" value="Add">
+              </form>
+              </div>
+  </body>
+</html>

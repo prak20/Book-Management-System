@@ -1,0 +1,32 @@
+body{
+  background-image: url('../images/lightgreen.png');
+  margin:0 0 80px;
+}
+.heading{
+  color:white;
+  background-color:navy;
+  width:100%;
+}
+.heading h1{
+  padding:10px;
+}
+.questionblock{
+  background-color:white;
+  border-style:solid;
+  border-color:navy;
+  width:60%;
+  padding:20px;
+}
+.question{
+  font-size:20px;
+  font-weight:bold;
+}
+.options{
+  color:blue;
+  margin-left:20px;
+}
+.submit input{
+  width:200px;
+  margin:10px;
+}
+}

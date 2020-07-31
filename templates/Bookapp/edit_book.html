@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Edit book Record</title>
+    <link rel="stylesheet" href="{% static '/css/Bookstyle.css' %}">
+  </head>
+  <body>
+    <div id="header">
+      <h1>
+        Book Record Management
+        </h1>
+        <div id="nav">
+          <a href="/Bookapp/view-books">View Books</a>
+          <a href="/Bookapp/new-book">Add new book</a>
+          <a href="/Bookapp/search-book">Search Specific Book</a>
+          <a href="/Bookapp/logout">Logout</a>
+          </div>
+          </div>
+          <div id="main">
+            <h2>Edit Book Record</h2>
+            <form action="/Bookapp/edit" method='post'>
+              {% csrf_token %}
+              <input type="hidden" name="bookid" value="{{book.id}}">
+              {{form}}
+              <input type="submit" value="Save">
+              </form>
+              </div>
+  </body>
+</html>
