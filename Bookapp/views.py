@@ -21,7 +21,7 @@ def add(request):
         book.author=form.data['author']
         book.publisher=form.data['publisher']
         book.save()
-    s="Record Stored in DB <br><a href='/Bookapp/view-books'>View All Books</a>"
+    s="<h1 style='text-align: center; color: Tomato; font-family: arial, sans-serif; background-color:DodgerBlue;'>Record Stored in DB </h1><br><br><h2><a href='/Bookapp/view-books'  style='text-align: center; color: #999999;'>View All Books</a></h2>"
     return HttpResponse(s)
 @login_required(login_url="/Bookapp/login/")
 def viewBooks(request):

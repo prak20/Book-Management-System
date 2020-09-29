@@ -19,6 +19,7 @@ from django.conf.urls import url
 from django.urls import include
 from testapp import views as t_views
 from exam import views as e_views
+from . views import *
 
 urlpatterns = [
     url('testapp/',include('testapp.urls')),
@@ -30,4 +31,5 @@ urlpatterns = [
     #path('contact/',t_views.showContact),
     #url('^$',t_views.greeting),
     path('admin/', admin.site.urls),
+    path('',myhome),
 ]

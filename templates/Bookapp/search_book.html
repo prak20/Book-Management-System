@@ -20,7 +20,7 @@
           </div>
           <div id="main">
             <h2>Search Book Record</h2>
-            <form action="Bookapp/search" method="post">
+            <form action="/Bookapp/search_book" method="post">
               {% csrf_token %}
               {{form}}
               <input type="submit" value="Search">
